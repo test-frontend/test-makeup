@@ -1,0 +1,34 @@
+{
+  "name": "test-markup",
+  "version": "1.0.0",
+  "description": "Тестовое задание на должность удаленного верстальщика",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/test-frontend/test-markup.git"
+  },
+  "author": "Sergey Ryabov <79298547682@ya.ru>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/test-frontend/test-markup/issues"
+  },
+  "homepage": "https://github.com/test-frontend/test-markup#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.1.1",
+    "browser-sync": "^2.24.6",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-concat-css": "^3.1.0",
+    "gulp-if": "^2.0.2",
+    "gulp-postcss": "^8.0.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.0.1",
+    "gulp-sass-lint": "^1.4.0",
+    "gulp-sequence": "^1.0.0",
+    "gulp-uglifycss": "^1.1.0",
+    "postcss-url": "^8.0.0"
+  }
+}

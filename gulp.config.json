@@ -1,0 +1,24 @@
+{
+  "production": false,
+  "root": "./",
+  "src": "./src",
+  "build" : "./build",
+  "styles": {
+    "src": "./src/styles/**/*.{sass,scss}",
+    "build": "./build/styles",
+    "lint": {
+      "rules": {
+        "no-color-keywords": 0,
+        "no-vendor-prefixes": 0
+      }
+    },
+    "autoprefixer": {
+      "browsers": ["last 3 versions"],
+      "cascade": false
+    }
+  },
+  "templates": {
+    "src": "./src/templates/**/*.pug",
+    "build": "./build"
+  }
+}
