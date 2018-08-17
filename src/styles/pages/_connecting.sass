@@ -9,9 +9,12 @@
   &::before
     align-items: center
     animation: pulse-inner 2s infinite
+    background: url('/images/icons/icon-connection.svg') no-repeat center
+    background-size: calc(5.72rem - 2px) auto
     border: 2px solid map-get($colors, cwhite)
     border-radius: 50%
     box-shadow: 0 0 0 0 transparentize(map-get($colors, cprimary), .7)
+    content: ''
     display: flex
     flex: none
     flex-direction: row
@@ -20,9 +23,6 @@
     margin-bottom: 3.8rem
     position: relative
     width: 9.28rem
-    background: url('/images/icons/icon-connection.svg') no-repeat center
-    background-size: calc(5.72rem - 2px) auto
-    content: ''
 
   &::after
     animation: pulse-outer 2s infinite
@@ -37,25 +37,25 @@
 
   &-head
     color: map-get($colors, cwhite)
+    flex: 1 0 auto
     font-size: 1.07rem
     font-weight: 500
-    text-transform: uppercase
-    flex: 1 0 auto
     text-align: center
+    text-transform: uppercase
 
     &-desctiption
       color: map-get($colors, cprimary)
       font-weight: 300
-      text-transform: none
       margin-top: .7rem
+      text-transform: none
 
   &-tips
+    flex: 0 0 auto
     font-weight: 500
     padding: 0 3.57rem
     text-align: center
     text-transform: uppercase
     width: 100%
-    flex: 0 0 auto
 
     &-button
       border: 1px solid map-get($colors, cwhite)
