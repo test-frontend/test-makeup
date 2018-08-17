@@ -1,0 +1,30 @@
+doctype html
+html
+  head
+    block head
+      meta(charset = 'utf-8')
+      meta(name = 'viewport'
+           content = 'initial-scale=1.0, width=device-width')
+
+      link(rel = 'stylesheet'
+           href = 'styles/application.css')
+
+      link(rel = 'stylesheet'
+           href = 'https://fonts.googleapis.com/css?family=Roboto:100,300,500')
+
+      title
+        block title
+          | test-frontend
+
+  body
+    .wrapper
+      block alert
+
+      .wrapper-logo Wallet
+
+      block content
+
+      block footer
+        .footer
+          .footer-logo
+          .footer-version ver. 1.0

@@ -1,0 +1,128 @@
+.connecting
+  align-items: center
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  position: relative
+  width: 100%
+
+  &::before
+    align-items: center
+    animation: pulse-inner 2s infinite
+    border: 2px solid map-get($colors, cwhite)
+    border-radius: 50%
+    box-shadow: 0 0 0 0 transparentize(map-get($colors, cprimary), .7)
+    display: flex
+    flex: none
+    flex-direction: row
+    height: 9.28rem
+    justify-content: center
+    margin-bottom: 3.8rem
+    position: relative
+    width: 9.28rem
+    background: url('/images/icons/icon-connection.svg') no-repeat center
+    background-size: calc(5.72rem - 2px) auto
+    content: ''
+
+  &::after
+    animation: pulse-outer 2s infinite
+    border-radius: 50%
+    box-shadow: 0 0 0 0 transparentize(map-get($colors, cprimary), .85)
+    content: ''
+    height: 9.28rem
+    left: calc(50% - 9.28rem / 2)
+    position: absolute
+    top: 0
+    width: 9.28rem
+
+  &-head
+    color: map-get($colors, cwhite)
+    font-size: 1.07rem
+    font-weight: 500
+    text-transform: uppercase
+    flex: 1 0 auto
+    text-align: center
+
+    &-desctiption
+      color: map-get($colors, cprimary)
+      font-weight: 300
+      text-transform: none
+      margin-top: .7rem
+
+  &-tips
+    font-weight: 500
+    padding: 0 3.57rem
+    text-align: center
+    text-transform: uppercase
+    width: 100%
+    flex: 0 0 auto
+
+    &-button
+      border: 1px solid map-get($colors, cwhite)
+      border-radius: 4rem
+      color: map-get($colors, cwhite)
+      display: table
+      font-size: .71rem
+      margin: 0 auto 2.35rem
+      padding: 1.07rem 2.14rem
+
+    &-title
+      color: map-get($colors, cwhite)
+      font-size: 1.2rem
+      margin-bottom: 1.35rem
+
+    &-warning
+      color: map-get($colors, cprimary)
+      font-size: .78rem
+
+    &-text
+      color: map-get($colors, cwhite)
+      font-size: .71rem
+      font-weight: 300
+      text-shadow: 0 0 2px transparentize(map-get($colors, cwhite), .5)
+
+  &--error,
+  &--reload,
+  &--reload-2
+    &::before,
+    &::after
+      animation: none
+
+    &::before
+      border-color: transparentize(map-get($colors, cprimary), .7)
+
+    .connecting-tips-text
+      padding: 0 2rem
+
+  &--error
+    &::before
+      background-image: url('/images/icons/icon-connection--error.svg')
+
+  &--reload
+    &::before
+      background-image: url('/images/icons/icon-connection--reload.svg')
+
+  &--reload-2
+    &::before
+      background-image: url('/images/icons/icon-restart.svg')
+      background-size: 3.9rem auto
+
+@keyframes pulse-inner
+  0%
+    box-shadow: 0 0 0 0 transparentize(map-get($colors, cprimary), .7)
+
+  70%
+    box-shadow: 0 0 0 1rem transparentize(map-get($colors, cprimary), 1)
+
+  100%
+    box-shadow: 0 0 0 0 transparentize(map-get($colors, cprimary), 1)
+
+@keyframes pulse-outer
+  0%
+    box-shadow: 0 0 0 0 transparentize(map-get($colors, cprimary), .85)
+
+  70%
+    box-shadow: 0 0 0 2rem transparentize(map-get($colors, cprimary), 1)
+
+  100%
+    box-shadow: 0 0 0 0 transparentize(map-get($colors, cprimary), 1)

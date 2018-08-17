@@ -14,9 +14,17 @@ const autoprefixer   = require( 'autoprefixer' );
 const pug            = require( 'gulp-pug' );
 const browserSync    = require( 'browser-sync' ).create();
 const gulpSequence   = require( 'gulp-sequence' );
+const imagemin       = require( 'gulp-imagemin' );
 
 gulp.task('clean', () => {
-  return del(['./build/**/*']);
+  return del(['./dest/**/*']);
+});
+
+gulp.task('images', () => {
+  return gulp.src(config.images.src)
+              .pipe(imagemin())
+              .pipe(gulp.dest(config.images.build))
+              .pipe(browserSync.stream());
 });
 
 gulp.task('styles', () => {
@@ -49,7 +57,7 @@ gulp.task('templates', () => {
 
 gulp.task('browser-sync', () => {
   browserSync.init({
-    server: './build'
+    server: './dest'
   });
 });
 
@@ -58,7 +66,8 @@ gulp.task('watcher', ['default', 'browser-sync'], () => {
   gulp.watch('./src/templates/**/*.pug', ['templates']).on('change', browserSync.reload);
 });
 
-gulp.task('build', gulpSequence.apply(gulpSequence, ['clean'].concat('styles')
+gulp.task('build', gulpSequence.apply(gulpSequence, ['clean'].concat('images')
+                                                             .concat('styles')
                                                              .concat('templates')
 ));
 

@@ -1,0 +1,19 @@
+extends layout
+
+block title
+  | Connecting Restart — test-frontend
+
+block alert
+  .wrapper-alert.wrapper-alert--warning
+    span Warning!
+
+block content
+  .page.page--loader
+    .connecting.connecting--reload
+      .connecting-head Can't connect to network
+        .connecting-head-desctiption Try again later or enter the offline version
+
+      .connecting-tips
+        .connecting-tips-button Enter the wallets
+        .connecting-tips-text
+          p The data of&nbsp;all wallets may be&nbsp;incorrect without connection to&nbsp;the network

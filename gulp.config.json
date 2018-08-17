@@ -2,10 +2,10 @@
   "production": false,
   "root": "./",
   "src": "./src",
-  "build" : "./build",
+  "build" : "./dest",
   "styles": {
     "src": "./src/styles/**/*.{sass,scss}",
-    "build": "./build/styles",
+    "build": "./dest/styles",
     "lint": {
       "rules": {
         "no-color-keywords": 0,
@@ -19,6 +19,10 @@
   },
   "templates": {
     "src": "./src/templates/**/*.pug",
-    "build": "./build"
+    "build": "./dest"
+  },
+  "images": {
+    "src": "./src/images/**/*.{png,jpg,jpeg,gif,svg}",
+    "build": "./dest/images"
   }
 }
