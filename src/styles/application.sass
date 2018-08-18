@@ -1,4 +1,4 @@
-$background-bg-primary: #001c3a
+$background-bg-primary: #0c1c38
 $background-bg-secondary: rgba(14, 78, 135, 0)
 
 $page-gradient-top: rgba(47, 123, 194, .15)
@@ -55,16 +55,17 @@ body
   flex-direction: column
 
   &-alert
-    align-items: center
+    align-items: flex-end
     background: map-get($colors, cprimary)
     color: map-get($colors, cwhite)
     display: flex
     flex-direction: row
     font-size: .92rem
     font-weight: 500
+    height: 8.68vh
     justify-content: center
     left: 0
-    padding: 3.5rem 0 .85rem
+    padding-bottom: .85rem
     position: fixed
     text-align: center
     text-transform: uppercase
@@ -109,9 +110,10 @@ body
   width: 100%
 
   &::after
-    background: linear-gradient(to bottom, $page-gradient-top 50%, map-get($colors, ctransparent) 90%)
+    background: linear-gradient(to bottom, $page-gradient-top 0%, map-get($colors, ctransparent) 27.35rem)
     content: ''
     display: block
+    height: 100%
     left: 0
     position: absolute
     right: 0
@@ -134,9 +136,6 @@ body
       width: calc(100% + 18.85rem)
       z-index: -1
 
-    &::after
-      height: 27.35rem
-
   &--general
     &::before
       background: linear-gradient(360deg, $general-bg-first 7.19%, $general-bg-last 120.21%), url('/images/page-bg.png')
@@ -151,9 +150,6 @@ body
       width: calc(100% + 8rem)
       z-index: -1
 
-    &::after
-      height: 20.85rem
-
   &--signin
     &::before
       background-position: right center
@@ -163,7 +159,3 @@ body
       top: 0
       transform: matrix(-1, 0, 0, 1, 0, 0)
       width: 100%
-
-    &::after
-      height: 21.85rem
-      left: -11rem

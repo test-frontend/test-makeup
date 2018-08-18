@@ -80,7 +80,7 @@ $item-disabled-gradient-bottom: #051730
     position: relative
 
     &-point
-      left: 13.5rem
+      left: 14.3rem
       position: absolute
       top: -2.6rem
       z-index: 1
@@ -107,14 +107,14 @@ $item-disabled-gradient-bottom: #051730
         position: relative
 
         &::before
-          border-left: .285rem solid transparent
-          border-right: .285rem solid transparent
-          border-top: .285rem solid $graph-point-bg
-          bottom: -.285rem
+          border-left: calc(.285rem + 1px) solid transparent
+          border-right: calc(.285rem + 1px) solid transparent
+          border-top: calc(.285rem + 1px) solid $graph-point-bg
+          bottom: calc(-.285rem + 1px)
           content: ''
           height: 0
           position: absolute
-          right: .85rem
+          right: calc(.85rem - 1px)
           width: 0
 
     &-mask
@@ -297,7 +297,7 @@ $item-disabled-gradient-bottom: #051730
           color: map-get($colors, cgray)
 
         .general-list-item-price-value
-          color: transparentize(map-get($colors, cwhite), .9)
+          color: transparentize(map-get($colors, cwhite), .6)
 
           span
             &:last-child

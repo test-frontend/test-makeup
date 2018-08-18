@@ -149,6 +149,10 @@ template {
   display: none;
 }
 
+.form {
+  margin-bottom: 1.4rem;
+}
+
 .form-input {
   background: rgba(5, 11, 31, 0.6);
   border: 1px solid rgba(153, 206, 255, 0.3);
@@ -258,7 +262,7 @@ template {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  margin: 3.35rem 0 1.7rem;
+  margin: 5.2934vh 0 1.7rem;
 }
 
 .footer-logo {
@@ -282,6 +286,7 @@ template {
 .footer--noslogan .footer-logo {
   background-image: url("/images/logo-noslogan.svg");
   height: .92rem;
+  margin-bottom: .78rem;
   opacity: 1;
   width: 6.42rem;
 }
@@ -437,6 +442,7 @@ template {
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   font-weight: 500;
+  margin-top: 5.2934vh;
   padding: 0 3.57rem;
   text-align: center;
   text-transform: uppercase;
@@ -444,9 +450,9 @@ template {
 }
 
 .loader-tips-button {
-  border: 1px solid #fff;
+  border: 1px solid #c4c4c4;
   border-radius: 4rem;
-  color: #fff;
+  color: #c4c4c4;
   display: table;
   font-size: .71rem;
   margin: 0 auto 2.35rem;
@@ -456,7 +462,7 @@ template {
 .loader-tips-title {
   color: #fff;
   font-size: 1.2rem;
-  margin-bottom: 1.35rem;
+  margin-bottom: 1.85rem;
 }
 
 .loader-tips-warning {
@@ -465,10 +471,10 @@ template {
 }
 
 .loader-tips-text {
-  color: #fff;
+  color: #c4c4c4;
   font-size: .71rem;
   font-weight: 300;
-  text-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+  text-shadow: 0 0 0.14rem rgba(255, 255, 255, 0.5);
 }
 
 .loader--error::before,
@@ -513,8 +519,8 @@ template {
   }
 
   70% {
-    -webkit-box-shadow: 0 0 0 1rem rgba(153, 206, 255, 0);
-    box-shadow: 0 0 0 1rem rgba(153, 206, 255, 0);
+    -webkit-box-shadow: 0 0 0 14px rgba(153, 206, 255, 0);
+    box-shadow: 0 0 0 14px rgba(153, 206, 255, 0);
   }
 
   100% {
@@ -530,8 +536,8 @@ template {
   }
 
   70% {
-    -webkit-box-shadow: 0 0 0 1rem rgba(153, 206, 255, 0);
-    box-shadow: 0 0 0 1rem rgba(153, 206, 255, 0);
+    -webkit-box-shadow: 0 0 0 14px rgba(153, 206, 255, 0);
+    box-shadow: 0 0 0 14px rgba(153, 206, 255, 0);
   }
 
   100% {
@@ -547,8 +553,8 @@ template {
   }
 
   70% {
-    -webkit-box-shadow: 0 0 0 2rem rgba(153, 206, 255, 0);
-    box-shadow: 0 0 0 2rem rgba(153, 206, 255, 0);
+    -webkit-box-shadow: 0 0 0 28px rgba(153, 206, 255, 0);
+    box-shadow: 0 0 0 28px rgba(153, 206, 255, 0);
   }
 
   100% {
@@ -564,8 +570,8 @@ template {
   }
 
   70% {
-    -webkit-box-shadow: 0 0 0 2rem rgba(153, 206, 255, 0);
-    box-shadow: 0 0 0 2rem rgba(153, 206, 255, 0);
+    -webkit-box-shadow: 0 0 0 28px rgba(153, 206, 255, 0);
+    box-shadow: 0 0 0 28px rgba(153, 206, 255, 0);
   }
 
   100% {
@@ -659,7 +665,7 @@ template {
 }
 
 .general-graph-point {
-  left: 13.5rem;
+  left: 14.3rem;
   position: absolute;
   top: -2.6rem;
   z-index: 1;
@@ -690,14 +696,14 @@ template {
 }
 
 .general-graph-point-value::before {
-  border-left: .285rem solid transparent;
-  border-right: .285rem solid transparent;
-  border-top: 0.285rem solid #2f7bc2;
-  bottom: -.285rem;
+  border-left: calc(.285rem + 1px) solid transparent;
+  border-right: calc(.285rem + 1px) solid transparent;
+  border-top: calc(.285rem + 1px) solid #2f7bc2;
+  bottom: calc(-.285rem + 1px);
   content: '';
   height: 0;
   position: absolute;
-  right: .85rem;
+  right: calc(.85rem - 1px);
   width: 0;
 }
 
@@ -932,7 +938,7 @@ template {
 }
 
 .general-list-item--disabled .general-list-item-price-value {
-  color: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.4);
 }
 
 .general-list-item--disabled .general-list-item-price-value span:last-child {
@@ -1006,9 +1012,9 @@ body button {
 }
 
 .wrapper-alert {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
   background: #99ceff;
   color: #fff;
   display: -webkit-box;
@@ -1020,11 +1026,12 @@ body button {
   flex-direction: row;
   font-size: .92rem;
   font-weight: 500;
+  height: 8.68vh;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
   left: 0;
-  padding: 3.5rem 0 .85rem;
+  padding-bottom: .85rem;
   position: fixed;
   text-align: center;
   text-transform: uppercase;
@@ -1083,11 +1090,12 @@ body button {
 }
 
 .page::after {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(47, 123, 194, 0.15)), color-stop(90%, rgba(0, 0, 0, 0)));
-  background: -o-linear-gradient(top, rgba(47, 123, 194, 0.15) 50%, rgba(0, 0, 0, 0) 90%);
-  background: linear-gradient(to bottom, rgba(47, 123, 194, 0.15) 50%, rgba(0, 0, 0, 0) 90%);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 123, 194, 0.15)), color-stop(27.35rem, rgba(0, 0, 0, 0)));
+  background: -o-linear-gradient(top, rgba(47, 123, 194, 0.15) 0%, rgba(0, 0, 0, 0) 27.35rem);
+  background: linear-gradient(to bottom, rgba(47, 123, 194, 0.15) 0%, rgba(0, 0, 0, 0) 27.35rem);
   content: '';
   display: block;
+  height: 100%;
   left: 0;
   position: absolute;
   right: 0;
@@ -1098,9 +1106,9 @@ body button {
 .page--loader::before,
 .page--signup::before,
 .page--signin::before {
-  background: -webkit-gradient(linear, left bottom, left top, from(#001c3a), color-stop(120.21%, rgba(14, 78, 135, 0))), url("/images/page-bg.png");
-  background: -o-linear-gradient(bottom, #001c3a 0%, rgba(14, 78, 135, 0) 120.21%), url("/images/page-bg.png");
-  background: linear-gradient(360deg, #001c3a 0%, rgba(14, 78, 135, 0) 120.21%), url("/images/page-bg.png");
+  background: -webkit-gradient(linear, left bottom, left top, from(#0c1c38), color-stop(120.21%, rgba(14, 78, 135, 0))), url("/images/page-bg.png");
+  background: -o-linear-gradient(bottom, #0c1c38 0%, rgba(14, 78, 135, 0) 120.21%), url("/images/page-bg.png");
+  background: linear-gradient(360deg, #0c1c38 0%, rgba(14, 78, 135, 0) 120.21%), url("/images/page-bg.png");
   background-position: 0 center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1111,12 +1119,6 @@ body button {
   top: -2.28rem;
   width: calc(100% + 18.85rem);
   z-index: -1;
-}
-
-.page--loader::after,
-.page--signup::after,
-.page--signin::after {
-  height: 27.35rem;
 }
 
 .page--general::before {
@@ -1135,10 +1137,6 @@ body button {
   z-index: -1;
 }
 
-.page--general::after {
-  height: 20.85rem;
-}
-
 .page--signin::before {
   background-position: right center;
   background-size: auto 100%;
@@ -1149,9 +1147,4 @@ body button {
   -ms-transform: matrix(-1, 0, 0, 1, 0, 0);
   transform: matrix(-1, 0, 0, 1, 0, 0);
   width: 100%;
-}
-
-.page--signin::after {
-  height: 21.85rem;
-  left: -11rem;
 }
