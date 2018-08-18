@@ -1,0 +1,51 @@
+$label-color: #4084c0
+$input-bg: rgba(5, 11, 31, .6)
+$input-border: rgba(153, 206, 255, .3)
+$button-border: #f00
+
+.form
+  &-input
+    background: $input-bg
+    border: 1px solid $input-border
+    border-radius: 2.14rem
+    margin-bottom: 2.28rem
+    position: relative
+
+    &-label
+      align-items: center
+      bottom: 0
+      color: $label-color
+      display: flex
+      font-size: .71rem
+      font-weight: 300
+      left: 1.57rem
+      position: absolute
+      text-transform: uppercase
+      top: 0
+      z-index: 1
+
+    &-text
+      background: none
+      background-position: calc(100% - 1.4rem) center
+      background-repeat: no-repeat
+      border: 0
+      color: map-get($colors, cprimary)
+      height: 100%
+      padding: 1.39rem 3rem 1.39rem 1.57rem
+      width: 100%
+
+      &--email
+        background-image: url('/images/icons/icon-email.svg')
+
+      &--password
+        background-image: url('/images/icons/icon-password.svg')
+
+  &-button
+    background: none
+    border: 3px solid $button-border
+    border-radius: 2.14rem
+    color: map-get($colors, cprimary)
+    margin-top: 1.14rem
+    padding: 1.35rem 0
+    text-transform: uppercase
+    width: 100%

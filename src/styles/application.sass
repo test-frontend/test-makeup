@@ -4,10 +4,13 @@ $background-bg-secondary: rgba(14, 78, 135, 0)
 @import 'normalize'
 @import 'variables'
 
+@import 'components/form'
+
 @import 'partials/footer'
 
 @import 'pages/loader'
 @import 'pages/general'
+@import 'pages/signup'
 
 @viewport
   user-zoom: fixed
@@ -38,6 +41,12 @@ body
     &::before,
     &::after
       box-sizing: border-box
+
+  input,
+  button
+    font-family: 'Roboto'
+    font-size: 1rem
+    font-weight: 300
 
 .wrapper
   display: flex
@@ -94,7 +103,8 @@ body
   flex: 1 0 auto
   width: 100%
 
-  &--loader
+  &--loader,
+  &--signup
     &::before
       background: linear-gradient(360deg, $background-bg-primary 0%, $background-bg-secondary 120.21%), url('/images/page-bg.png')
       background-position: 0 center

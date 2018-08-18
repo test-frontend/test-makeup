@@ -1,0 +1,33 @@
+extends layout
+
+block title
+  | Sign Up — test-frontend
+
+block footer-logo
+  .footer-logo.footer-logo--noslogan
+
+block content
+  .page.page--signup
+    .signup
+      .signup-head
+        .signup-head-title Create Account
+        a.signup-head-button(href = '#')
+          span user login
+
+      form.form
+        .form-input
+          .form-input-label Email
+          input.form-input-text.form-input-text--email(type = 'text'
+                                                       autocomplete = 'off')
+
+        .form-input
+          .form-input-label Password
+          input.form-input-text.form-input-text--password(type = 'password'
+                                                          autocomplete = 'off')
+
+        .form-input
+          .form-input-label Confirm Password
+          input.form-input-text.form-input-text--password(type = 'password'
+                                                          autocomplete = 'off')
+
+        button.form-button Continue

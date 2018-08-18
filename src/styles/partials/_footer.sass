@@ -5,16 +5,28 @@
   flex-direction: column
   justify-content: center
   margin: 3.35rem 0 1.7rem
-  opacity: .5
 
   &-logo
-    background: url('/images/logo-mini.svg') no-repeat center
+    background-image: url('/images/logo-mini.svg')
+    background-position: center
+    background-repeat: no-repeat
     background-size: contain
     height: 1.64rem
     margin-bottom: 1.28rem
+    opacity: .5
     width: 8.14rem
+
+    &--noslogan
+      background-image: url('/images/logo-noslogan.svg')
+      height: .92rem
+      opacity: 1
+      width: 6.42rem
+
+      & + div
+        opacity: .3
 
   &-version
     color: map-get($colors, cprimary)
     font-size: .85rem
     font-weight: 300
+    opacity: .5
