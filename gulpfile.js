@@ -16,6 +16,15 @@ const browserSync    = require( 'browser-sync' ).create();
 const gulpSequence   = require( 'gulp-sequence' );
 const imagemin       = require( 'gulp-imagemin' );
 
+// Для последовательного выполнения задач при вызове watch
+function taskWatchSequence (tasks) {
+  return function (event) {
+    gulpSequence.apply(gulpSequence, tasks)(function (err) {
+      if (err) console.log(err);
+    });
+  }
+}
+
 gulp.task('clean', () => {
   return del(['./dest/**/*']);
 });
@@ -61,10 +70,12 @@ gulp.task('browser-sync', () => {
   });
 });
 
-gulp.task('watcher', ['default', 'browser-sync'], () => {
+gulp.task('watcher-task', () => {
   gulp.watch('./src/styles/**/*.{sass,scss}', ['styles']).on('change', browserSync.reload);
   gulp.watch('./src/templates/**/*.pug', ['templates']).on('change', browserSync.reload);
 });
+
+gulp.task('watcher', gulpSequence.apply(gulpSequence, ['default'].concat('watcher-task').concat(['browser-sync'])));
 
 gulp.task('build', gulpSequence.apply(gulpSequence, ['clean'].concat('images')
                                                              .concat('styles')

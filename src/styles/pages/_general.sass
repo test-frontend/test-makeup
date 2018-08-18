@@ -1,0 +1,287 @@
+.general
+  width: 100%
+
+  &-head
+    height: 17.98rem
+    display: flex
+    align-items: center
+    justify-content: center
+    text-align: center
+    margin-bottom: -3rem
+
+    &-title
+      color: #fff
+      position: absolute
+      top: 3.35rem
+      left: 0
+      right: 0
+      text-align: center
+      text-transform: capitalize
+
+    &-menu
+      &-icon
+        height: .42rem
+        width: 1.57rem
+        position: absolute
+        top: 3.85rem
+        right: 1.28rem
+        background: url('/images/icons/icon-menu.svg') no-repeat right center
+        background-size: contain
+
+    &-price
+      &-value
+        display: flex
+        align-items: flex-end
+        font-size: 2.42rem
+        color: #fff
+        line-height: 1
+        margin-bottom: .5rem
+
+        span
+          font-size: 1.5rem
+
+        &-filter
+          height: 1.14rem
+          width: 1rem
+          background: url('/images/icons/icon-filter.svg') no-repeat center
+          background-size: contain
+          margin-left: .5rem
+          position: relative
+          top: -.3rem
+
+      &-active
+        display: flex
+        font-size: .92rem
+        color: map-get($colors, cprimary)
+        font-weight: 300
+
+        &-dynamic
+          color: #04d67e
+          margin-left: .71rem
+
+  &-graph
+    position: relative
+
+    &-point
+      position: absolute
+      top: -2.6rem
+      left: 13.5rem
+      z-index: 1
+
+      &::before
+        content: ''
+        display: block
+        height: .71rem
+        width: .71rem
+        background: #99CEFF
+        border-radius: 50%
+        box-shadow: 0 0 0 .21rem transparentize(#99CEFF, .9)
+        position: absolute
+        bottom: -1.13rem
+        right: .8rem
+
+      &-value
+        font-size: .71rem
+        color: #fff
+        font-weight: 300
+        background: #2F7BC2
+        border-radius: 1.07rem
+        padding: .48rem .92rem .44rem
+        position: relative
+
+        &::before
+          content: ''
+          width: 0
+          height: 0
+          border-left: .285rem solid transparent
+          border-right: .285rem solid transparent
+          border-top: .285rem solid #2F7BC2
+          position: absolute
+          bottom: -.285rem
+          right: .85rem
+
+    &-mask
+      height: 3rem
+      background: linear-gradient(to bottom, #06284c, #072041)
+      mask: url('/images/graphs/graph-1.svg') no-repeat right top
+      mask-size: 100% auto
+
+    &::before
+      content: ''
+      display: block
+      width: 100%
+      height: 3rem
+      background: linear-gradient(to bottom, #00cf82, #0082bf)
+      mask: url('/images/graphs/graph-line-1.svg') no-repeat right top
+      mask-size: 100% auto
+      position: absolute
+      bottom: 0
+      left: 0
+      z-index: 1
+
+  &-list
+    padding: 2rem 1.35rem 0
+    background: linear-gradient(to bottom, #072041 0%, rgba(0, 0, 0, 0) 10%)
+
+    &-tabs
+      display: flex
+      margin-bottom: 2.64rem
+
+      &-item
+        flex: none
+        width: 50%
+        text-decoration: none
+        text-align: center
+        font-size: .78rem
+        text-transform: capitalize
+        border: 1px solid rgba(75, 140, 198, .5)
+        padding: .57rem 0
+        color: map-get($colors, cprimary)
+        font-weight: 300
+
+        &:first-child
+          border-radius: .28rem 0 0 .28rem
+
+        &:last-child
+          border-radius: 0 .28rem .28rem 0
+
+        &--active
+          background: #4084C0
+          color: map-get($colors, cwhite)
+
+    &-item
+      display: block
+      background: linear-gradient(180deg, rgba(153, 206, 255, .1508) 0%, rgba(47, 123, 194, 0) 100%), #061A37
+      border: 1px solid rgba(153, 206, 255, .25)
+      border-radius: .35rem
+      text-decoration: none
+      padding: 1.5rem 2rem 1.85rem 1.42rem
+      position: relative
+      margin-bottom: .85rem
+      box-shadow: 0 -2px 13px rgba(0, 0, 0, .1)
+
+      &::before
+        position: absolute
+        bottom: 1.07rem
+        left: 1.07rem
+        display: block
+        background: url('/images/icons/icon-swipe.svg') no-repeat left bottom
+        background-size: contain
+        height: .53rem
+        width: 1.85rem
+        content: ''
+
+      &::after
+        content: ''
+        position: absolute
+        top: .85rem
+        right: .85rem
+        display: block
+        mask-repeat: no-repeat
+        mask-position: center
+        mask-size: 100% 100%
+        height: 1.85rem
+        width: 1.85rem
+        background: map-get($colors, cprimary)
+
+      &-head
+        display: block
+        margin-bottom: 1rem
+        position: relative
+        padding-left: 4.44rem
+        padding-top: .64rem
+
+        &::before
+          content: ''
+          display: block
+          border-radius: 50%
+          height: 3.3rem
+          width: 3.3rem
+          position: absolute
+          top: 0
+          left: 0
+          background-position: center
+          background-repeat: no-repeat
+          background-size: contain
+
+        &-name
+          display: block
+          color: map-get($colors, cwhite)
+          font-size: .85rem
+          font-weight: 500
+          text-transform: uppercase
+          margin-bottom: .42rem
+
+        &-hash
+          display: block
+          color: map-get($colors, cprimary)
+          font-size: .78rem
+          letter-spacing: .03em
+          font-weight: 300
+
+      &-price
+        text-align: right
+        font-weight: 300
+
+        &-value
+          display: block
+          font-size: 2.07rem
+          color: map-get($colors, cwhite)
+
+          span
+            font-size: 1.35rem
+
+            &:last-child
+              color: #C4C4C4
+
+        &-usd
+          display: block
+          font-size: .92rem
+          color: #C4C4C4
+
+      &--mhc
+        &::after
+          mask-image: url('/images/icons/icon-system-1.svg')
+
+        .general-list-item-head
+          &::before
+            background-image: url('/images/wallet/MHC.png')
+
+      &--btc
+        &::after
+          mask-image: url('/images/icons/icon-system-2.svg')
+
+        .general-list-item-head
+          &::before
+            background-image: url('/images/wallet/BTC.png')
+
+      &--eth
+        &::after
+          mask-image: url('/images/icons/icon-system-3.svg')
+
+        .general-list-item-head
+          &::before
+            background-image: url('/images/wallet/ETH.png')
+
+      &--disabled
+        background: linear-gradient(to bottom, #05172f 0%, #051730 100%)
+
+        &::after
+          background: #C4C4C4
+
+        .general-list-item-head
+          &::before
+            filter: grayscale(100%)
+
+        .general-list-item-head-hash
+          color: #C4C4C4
+
+        .general-list-item-price-value
+          color: rgba(255, 255, 255, .5)
+
+          span
+            &:last-child
+              color: rgba(196, 196, 196, .3)
+
+        .general-list-item-price-usd
+          color: rgba(196, 196, 196, .3)

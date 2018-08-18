@@ -6,7 +6,8 @@ $background-bg-secondary: rgba(14, 78, 135, 0)
 
 @import 'partials/footer'
 
-@import 'pages/connecting'
+@import 'pages/loader'
+@import 'pages/general'
 
 @viewport
   user-zoom: fixed
@@ -105,4 +106,18 @@ body
       position: absolute
       top: -2.28rem
       width: calc(100% + 18.85rem)
+      z-index: -1
+
+  &--general
+    &::before
+      background: linear-gradient(360deg, #001C3A 7.19%, rgba(14, 78, 135, 0) 120.21%), url('/images/page-bg.png')
+      background-position: 0 center
+      background-repeat: no-repeat
+      background-size: cover
+      content: ''
+      height: 20.85rem
+      left: -8rem
+      position: absolute
+      top: 0
+      width: calc(100% + 8rem)
       z-index: -1

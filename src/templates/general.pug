@@ -1,0 +1,88 @@
+extends layout
+
+block title
+  | General — test-frontend
+
+block logo
+
+block content
+  .page.page--general
+    .general
+      .general-head
+        .general-head-title Total assets value
+
+        .general-head-menu
+          .general-head-menu-icon
+
+        .general-head-price
+          .general-head-price-value
+            | 1967<span>.00 USD</span>
+            .general-head-price-value-filter
+
+          .general-head-price-active
+            .general-head-price-active-system #MHC: 674,64 USD
+            .general-head-price-active-dynamic +12.55%
+
+      .general-graph
+        .general-graph-point 
+          .general-graph-point-value $588.02
+        .general-graph-mask
+
+      .general-list
+        .general-list-tabs
+          a.general-list-tabs-item(href = '#') Currency
+          a.general-list-tabs-item.general-list-tabs-item--active(href = '#') Recent Wallets
+
+        a.general-list-item.general-list-item--mhc(href = '#')
+          span.general-list-item-head
+            span.general-list-item-head-name SuperWallet
+            span.general-list-item-head-hash d7dc 881c ... fd36 84bb 672d 1
+
+          span.general-list-item-price
+            span.general-list-item-price-value 62<span>.200939</span> <span>#MHC</span>
+            span.general-list-item-price-usd 256.12 USD
+
+        a.general-list-item.general-list-item--btc(href = '#')
+          span.general-list-item-head
+            span.general-list-item-head-name Btc wallet
+            span.general-list-item-head-hash d7dc 881c ... fd36 84bb 672d 1
+
+          span.general-list-item-price
+            span.general-list-item-price-value 7<span>.29</span> <span>BTC</span>
+            span.general-list-item-price-usd 49,395.12 USD
+
+        a.general-list-item.general-list-item--eth.general-list-item--disabled(href = '#')
+          span.general-list-item-head
+            span.general-list-item-head-name Wallet for exchange
+            span.general-list-item-head-hash  d7dc 881c ... fd36 84bb gmgk
+
+          span.general-list-item-price
+            span.general-list-item-price-value 105<span>.0</span> <span>ETH</span>
+            span.general-list-item-price-usd 14,035.00 USD
+
+        a.general-list-item.general-list-item--mhc(href = '#')
+          span.general-list-item-head
+            span.general-list-item-head-name SuperWallet
+            span.general-list-item-head-hash d7dc 881c ... fd36 84bb 672d 1
+
+          span.general-list-item-price
+            span.general-list-item-price-value 62<span>.200939</span> <span>#MHC</span>
+            span.general-list-item-price-usd 256.12 USD
+
+        a.general-list-item.general-list-item--btc(href = '#')
+          span.general-list-item-head
+            span.general-list-item-head-name Btc wallet
+            span.general-list-item-head-hash d7dc 881c ... fd36 84bb 672d 1
+
+          span.general-list-item-price
+            span.general-list-item-price-value 7<span>.29</span> <span>BTC</span>
+            span.general-list-item-price-usd 49,395.12 USD
+
+        a.general-list-item.general-list-item--eth(href = '#')
+          span.general-list-item-head
+            span.general-list-item-head-name Wallet for exchange
+            span.general-list-item-head-hash  d7dc 881c ... fd36 84bb gmgk
+
+          span.general-list-item-price
+            span.general-list-item-price-value 105<span>.0</span> <span>ETH</span>
+            span.general-list-item-price-usd 14,035.00 USD
