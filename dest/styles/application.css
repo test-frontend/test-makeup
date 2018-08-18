@@ -661,6 +661,7 @@ template {
 }
 
 .general-graph {
+  margin-bottom: 2rem;
   position: relative;
 }
 
@@ -736,21 +737,14 @@ template {
   z-index: 1;
 }
 
-.general-list {
-  background: -webkit-gradient(linear, left top, left bottom, from(#072041), color-stop(10%, rgba(0, 0, 0, 0)));
-  background: -o-linear-gradient(top, #072041 0%, rgba(0, 0, 0, 0) 10%);
-  background: linear-gradient(to bottom, #072041 0%, rgba(0, 0, 0, 0) 10%);
-  padding: 2rem 1.35rem 1.85rem;
-}
-
-.general-list-tabs {
+.general-tabs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 2.64rem;
+  margin: 0 1.35rem 2.64rem;
 }
 
-.general-list-tabs-item {
+.general-tabs-item {
   border: 1px solid rgba(75, 140, 198, 0.5);
   color: rgba(75, 140, 198, 0.5);
   -webkit-box-flex: 0;
@@ -765,17 +759,21 @@ template {
   width: 50%;
 }
 
-.general-list-tabs-item:first-child {
+.general-tabs-item:first-child {
   border-radius: .28rem 0 0 .28rem;
 }
 
-.general-list-tabs-item:last-child {
+.general-tabs-item:last-child {
   border-radius: 0 .28rem .28rem 0;
 }
 
-.general-list-tabs-item--active {
+.general-tabs-item--active {
   background: #4084c0;
   color: #fff;
+}
+
+.general-list {
+  padding: 0 1.35rem 1.85rem;
 }
 
 .general-list-item {

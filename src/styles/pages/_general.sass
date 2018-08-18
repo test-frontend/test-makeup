@@ -77,6 +77,7 @@ $item-disabled-gradient-bottom: #051730
           margin-left: .71rem
 
   &-graph
+    margin-bottom: 2rem
     position: relative
 
     &-point
@@ -136,35 +137,34 @@ $item-disabled-gradient-bottom: #051730
       width: 100%
       z-index: 1
 
+  &-tabs
+    display: flex
+    margin: 0 1.35rem 2.64rem
+
+    &-item
+      border: 1px solid $tabs-color
+      color: $tabs-color
+      flex: none
+      font-size: .78rem
+      font-weight: 300
+      padding: .57rem 0
+      text-align: center
+      text-decoration: none
+      text-transform: capitalize
+      width: 50%
+
+      &:first-child
+        border-radius: .28rem 0 0 .28rem
+
+      &:last-child
+        border-radius: 0 .28rem .28rem 0
+
+      &--active
+        background: $tabs-active-color
+        color: map-get($colors, cwhite)
+
   &-list
-    background: linear-gradient(to bottom, $mask-gradient-bottom 0%, map-get($colors, ctransparent) 10%)
-    padding: 2rem 1.35rem 1.85rem
-
-    &-tabs
-      display: flex
-      margin-bottom: 2.64rem
-
-      &-item
-        border: 1px solid $tabs-color
-        color: $tabs-color
-        flex: none
-        font-size: .78rem
-        font-weight: 300
-        padding: .57rem 0
-        text-align: center
-        text-decoration: none
-        text-transform: capitalize
-        width: 50%
-
-        &:first-child
-          border-radius: .28rem 0 0 .28rem
-
-        &:last-child
-          border-radius: 0 .28rem .28rem 0
-
-        &--active
-          background: $tabs-active-color
-          color: map-get($colors, cwhite)
+    padding: 0 1.35rem 1.85rem
 
     &-item
       background: linear-gradient(to bottom, $item-gradient-top 0%, $item-gradient-bottom 100%)
