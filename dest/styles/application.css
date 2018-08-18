@@ -202,11 +202,11 @@ template {
 }
 
 .form-input-text--email {
-  background-image: url("/images/icons/icon-email.svg");
+  background-image: url("../images/icons/icon-email.svg");
 }
 
 .form-input-text--password {
-  background-image: url("/images/icons/icon-password.svg");
+  background-image: url("../images/icons/icon-password.svg");
 }
 
 .form-input--focus .form-input-label {
@@ -219,7 +219,7 @@ template {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background: url("/images/form-button-border.svg") no-repeat center;
+  background: url("../images/form-button-border.svg") no-repeat center;
   background-size: 100% 100%;
   border: 0;
   border-radius: 2.14rem;
@@ -237,7 +237,7 @@ template {
 }
 
 .form-button::after {
-  background: url("/images/icons/icon-send.svg") no-repeat center;
+  background: url("../images/icons/icon-send.svg") no-repeat center;
   background-size: content;
   content: '';
   height: 1.14rem;
@@ -266,7 +266,7 @@ template {
 }
 
 .footer-logo {
-  background-image: url("/images/logo.svg");
+  background-image: url("../images/logo.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -284,7 +284,7 @@ template {
 }
 
 .footer--noslogan .footer-logo {
-  background-image: url("/images/logo-noslogan.svg");
+  background-image: url("../images/logo-noslogan.svg");
   height: .92rem;
   margin-bottom: .78rem;
   opacity: 1;
@@ -348,11 +348,11 @@ template {
 }
 
 .auth-head-button--signin::after {
-  background-image: url("/images/icons/icon-user.svg");
+  background-image: url("../images/icons/icon-user.svg");
 }
 
 .auth-head-button--signup::after {
-  background-image: url("/images/icons/icon-key.svg");
+  background-image: url("../images/icons/icon-key.svg");
 }
 
 .loader {
@@ -379,7 +379,7 @@ template {
   align-items: center;
   -webkit-animation: pulse-inner 2s infinite;
   animation: pulse-inner 2s infinite;
-  background: url("/images/icons/icon-connection.svg") no-repeat center;
+  background: url("../images/icons/icon-connection.svg") no-repeat center;
   background-size: calc(5.72rem - 2px) auto;
   border: 2px solid #fff;
   border-radius: 50%;
@@ -500,15 +500,15 @@ template {
 }
 
 .loader--error::before {
-  background-image: url("/images/icons/icon-connection--error.svg");
+  background-image: url("../images/icons/icon-connection--error.svg");
 }
 
 .loader--reload::before {
-  background-image: url("/images/icons/icon-connection--reload.svg");
+  background-image: url("../images/icons/icon-connection--reload.svg");
 }
 
 .loader--reload-2::before {
-  background-image: url("/images/icons/icon-restart.svg");
+  background-image: url("../images/icons/icon-restart.svg");
   background-size: 3.9rem auto;
 }
 
@@ -610,7 +610,7 @@ template {
 }
 
 .general-head-menu-icon {
-  background: url("/images/icons/icon-menu.svg") no-repeat right center;
+  background: url("../images/icons/icon-menu.svg") no-repeat right center;
   background-size: contain;
   height: .42rem;
   position: absolute;
@@ -637,7 +637,7 @@ template {
 }
 
 .general-head-price-value-filter {
-  background: url("/images/icons/icon-filter.svg") no-repeat center;
+  background: url("../images/icons/icon-filter.svg") no-repeat center;
   background-size: contain;
   height: 1.14rem;
   margin-left: .5rem;
@@ -713,8 +713,8 @@ template {
   background: -o-linear-gradient(top, #06284c, #072041);
   background: linear-gradient(to bottom, #06284c, #072041);
   height: 3rem;
-  -webkit-mask: url("/images/graphs/graph-1.svg") no-repeat right top;
-  mask: url("/images/graphs/graph-1.svg") no-repeat right top;
+  -webkit-mask: url("../images/graphs/graph-1.svg") no-repeat right top;
+  mask: url("../images/graphs/graph-1.svg") no-repeat right top;
   -webkit-mask-size: 100% auto;
   mask-size: 100% auto;
 }
@@ -728,8 +728,8 @@ template {
   display: block;
   height: 3rem;
   left: 0;
-  -webkit-mask: url("/images/graphs/graph-line-1.svg") no-repeat right top;
-  mask: url("/images/graphs/graph-line-1.svg") no-repeat right top;
+  -webkit-mask: url("../images/graphs/graph-line-1.svg") no-repeat right top;
+  mask: url("../images/graphs/graph-line-1.svg") no-repeat right top;
   -webkit-mask-size: 100% auto;
   mask-size: 100% auto;
   position: absolute;
@@ -792,7 +792,7 @@ template {
 }
 
 .general-list-item::before {
-  background: url("/images/icons/icon-swipe.svg") no-repeat left bottom;
+  background: url("../images/icons/icon-swipe.svg") no-repeat left bottom;
   background-size: contain;
   bottom: 1.07rem;
   content: '';
@@ -885,30 +885,30 @@ template {
 }
 
 .general-list-item--mhc::after {
-  -webkit-mask-image: url("/images/icons/icon-system-1.svg");
-  mask-image: url("/images/icons/icon-system-1.svg");
+  -webkit-mask-image: url("../images/icons/icon-system-1.svg");
+  mask-image: url("../images/icons/icon-system-1.svg");
 }
 
 .general-list-item--mhc .general-list-item-head::before {
-  background-image: url("/images/wallet/MHC.png");
+  background-image: url("../images/wallet/MHC.png");
 }
 
 .general-list-item--btc::after {
-  -webkit-mask-image: url("/images/icons/icon-system-2.svg");
-  mask-image: url("/images/icons/icon-system-2.svg");
+  -webkit-mask-image: url("../images/icons/icon-system-2.svg");
+  mask-image: url("../images/icons/icon-system-2.svg");
 }
 
 .general-list-item--btc .general-list-item-head::before {
-  background-image: url("/images/wallet/BTC.png");
+  background-image: url("../images/wallet/BTC.png");
 }
 
 .general-list-item--eth::after {
-  -webkit-mask-image: url("/images/icons/icon-system-3.svg");
-  mask-image: url("/images/icons/icon-system-3.svg");
+  -webkit-mask-image: url("../images/icons/icon-system-3.svg");
+  mask-image: url("../images/icons/icon-system-3.svg");
 }
 
 .general-list-item--eth .general-list-item-head::before {
-  background-image: url("/images/wallet/ETH.png");
+  background-image: url("../images/wallet/ETH.png");
 }
 
 .general-list-item--disabled {
@@ -1039,7 +1039,7 @@ body button {
 }
 
 .wrapper-alert::before {
-  background: url("/images/icons/icon-alert.svg") no-repeat center;
+  background: url("../images/icons/icon-alert.svg") no-repeat center;
   background-size: contain;
   content: '';
   height: 1rem;
@@ -1052,7 +1052,7 @@ body button {
 }
 
 .wrapper-alert--warning::before {
-  background-image: url("/images/icons/icon-warning.svg");
+  background-image: url("../images/icons/icon-warning.svg");
 }
 
 .wrapper-logo {
@@ -1104,9 +1104,9 @@ body button {
 .page--loader::before,
 .page--signup::before,
 .page--signin::before {
-  background: -webkit-gradient(linear, left bottom, left top, from(#0c1c38), color-stop(120.21%, rgba(14, 78, 135, 0))), url("/images/page-bg.png");
-  background: -o-linear-gradient(bottom, #0c1c38 0%, rgba(14, 78, 135, 0) 120.21%), url("/images/page-bg.png");
-  background: linear-gradient(360deg, #0c1c38 0%, rgba(14, 78, 135, 0) 120.21%), url("/images/page-bg.png");
+  background: -webkit-gradient(linear, left bottom, left top, from(#0c1c38), color-stop(120.21%, rgba(14, 78, 135, 0))), url("../images/page-bg.png");
+  background: -o-linear-gradient(bottom, #0c1c38 0%, rgba(14, 78, 135, 0) 120.21%), url("../images/page-bg.png");
+  background: linear-gradient(360deg, #0c1c38 0%, rgba(14, 78, 135, 0) 120.21%), url("../images/page-bg.png");
   background-position: 0 center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1120,9 +1120,9 @@ body button {
 }
 
 .page--general::before {
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(7.19%, #001c3a), color-stop(120.21%, rgba(14, 78, 135, 0))), url("/images/page-bg.png");
-  background: -o-linear-gradient(bottom, #001c3a 7.19%, rgba(14, 78, 135, 0) 120.21%), url("/images/page-bg.png");
-  background: linear-gradient(360deg, #001c3a 7.19%, rgba(14, 78, 135, 0) 120.21%), url("/images/page-bg.png");
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(7.19%, #001c3a), color-stop(120.21%, rgba(14, 78, 135, 0))), url("../images/page-bg.png");
+  background: -o-linear-gradient(bottom, #001c3a 7.19%, rgba(14, 78, 135, 0) 120.21%), url("../images/page-bg.png");
+  background: linear-gradient(360deg, #001c3a 7.19%, rgba(14, 78, 135, 0) 120.21%), url("../images/page-bg.png");
   background-position: 0 center;
   background-repeat: no-repeat;
   background-size: cover;

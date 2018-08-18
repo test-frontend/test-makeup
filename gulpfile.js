@@ -9,7 +9,6 @@ const sasslint       = require( 'gulp-sass-lint' );
 const concatcss      = require( 'gulp-concat-css' );
 const uglifycss      = require( 'gulp-uglifycss' );
 const postcss        = require( 'gulp-postcss' );
-const postcssUrl     = require( 'postcss-url' );
 const autoprefixer   = require( 'autoprefixer' );
 const pug            = require( 'gulp-pug' );
 const browserSync    = require( 'browser-sync' ).create();
@@ -45,11 +44,7 @@ gulp.task('styles', () => {
               .pipe(sasslint.failOnError())
               .pipe(sass())
               .pipe(postcss([
-                autoprefixer(config.styles.autoprefixer),
-                postcssUrl({
-                  url: 'inline',
-                  maxSize: 1024
-                })
+                autoprefixer(config.styles.autoprefixer)
               ]))
               .pipe(gulpif(config.production, uglifycss()))
               .pipe(concatcss('application.css'))
