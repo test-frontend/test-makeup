@@ -266,7 +266,7 @@ template {
 }
 
 .footer-logo {
-  background-image: url("/images/logo-mini.svg");
+  background-image: url("/images/logo.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
