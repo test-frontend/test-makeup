@@ -16,17 +16,18 @@
     opacity: .5
     width: 8.14rem
 
-    &--noslogan
-      background-image: url('/images/logo-noslogan.svg')
-      height: .92rem
-      opacity: 1
-      width: 6.42rem
-
-      & + div
-        opacity: .3
-
   &-version
     color: map-get($colors, cprimary)
     font-size: .85rem
     font-weight: 300
     opacity: .5
+
+  &--noslogan
+    .footer-logo
+      background-image: url('/images/logo-noslogan.svg')
+      height: .92rem
+      opacity: 1
+      width: 6.42rem
+
+    .footer-version
+      opacity: .3

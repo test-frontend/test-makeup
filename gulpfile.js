@@ -31,14 +31,16 @@ gulp.task('clean', () => {
 
 gulp.task('images', () => {
   return gulp.src(config.images.src)
-              .pipe(imagemin())
+              .pipe(imagemin({
+                verbose: true
+              }))
               .pipe(gulp.dest(config.images.build))
               .pipe(browserSync.stream());
 });
 
 gulp.task('styles', () => {
   return gulp.src(config.styles.src)
-              .pipe(sasslint(config.styles.lint.rules))
+              .pipe(sasslint(config.styles.lint))
               .pipe(sasslint.format())
               .pipe(sasslint.failOnError())
               .pipe(sass())

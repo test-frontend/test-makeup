@@ -1,7 +1,7 @@
 $label-color: #4084c0
 $input-bg: rgba(5, 11, 31, .6)
 $input-border: rgba(153, 206, 255, .3)
-$button-border: #f00
+$button-border: #1f77c8
 
 .form
   &-input
@@ -52,11 +52,23 @@ $button-border: #f00
         top: .71rem
 
   &-button
-    background: none
-    border: 3px solid $button-border
+    align-items: center
+    background: url('/images/form-button-border.svg') no-repeat center
+    background-size: 100% 100%
+    border: 0
     border-radius: 2.14rem
     color: map-get($colors, cprimary)
-    margin-top: 1.14rem
-    padding: 1.35rem 0
+    display: flex
+    justify-content: center
+    margin-top: 3.42rem
+    padding: 1.6rem 0
     text-transform: uppercase
     width: 100%
+
+    &::after
+      background: url('/images/icons/icon-send.svg') no-repeat center
+      background-size: content
+      content: ''
+      height: 1.14rem
+      margin-left: .5rem
+      width: 1.14rem

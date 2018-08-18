@@ -1,3 +1,20 @@
+$graph-point-bg: #2f7bc2
+$graph-gradient-top: #00cf82
+$graph-gradient-bottom: #0082bf
+
+$mask-gradient-top: #06284c
+$mask-gradient-bottom: #072041
+
+$tabs-color: rgba(75, 140, 198, .5)
+$tabs-active-color: #4084c0
+
+$item-border: rgba(153, 206, 255, .125)
+$item-boxshadow: rgba(0, 0, 0, .1)
+$item-gradient-top: #112745
+$item-gradient-bottom: #071a36
+$item-disabled-gradient-top: #05172f
+$item-disabled-gradient-bottom: #051730
+
 .general
   width: 100%
 
@@ -56,7 +73,7 @@
         font-weight: 300
 
         &-dynamic
-          color: #04d67e
+          color: map-get($colors, cgreen)
           margin-left: .71rem
 
   &-graph
@@ -81,7 +98,7 @@
         width: .71rem
 
       &-value
-        background: #2F7BC2
+        background: $graph-point-bg
         border-radius: 1.07rem
         color: map-get($colors, cwhite)
         font-size: .71rem
@@ -92,7 +109,7 @@
         &::before
           border-left: .285rem solid transparent
           border-right: .285rem solid transparent
-          border-top: .285rem solid #2F7BC2
+          border-top: .285rem solid $graph-point-bg
           bottom: -.285rem
           content: ''
           height: 0
@@ -101,13 +118,13 @@
           width: 0
 
     &-mask
-      background: linear-gradient(to bottom, #06284c, #072041)
+      background: linear-gradient(to bottom, $mask-gradient-top, $mask-gradient-bottom)
       height: 3rem
       mask: url('/images/graphs/graph-1.svg') no-repeat right top
       mask-size: 100% auto
 
     &::before
-      background: linear-gradient(to bottom, #00cf82, #0082bf)
+      background: linear-gradient(to bottom, $graph-gradient-top, $graph-gradient-bottom)
       bottom: 0
       content: ''
       display: block
@@ -120,7 +137,7 @@
       z-index: 1
 
   &-list
-    background: linear-gradient(to bottom, #072041 0%, rgba(0, 0, 0, 0) 10%)
+    background: linear-gradient(to bottom, $mask-gradient-bottom 0%, map-get($colors, ctransparent) 10%)
     padding: 2rem 1.35rem 1.85rem
 
     &-tabs
@@ -128,8 +145,8 @@
       margin-bottom: 2.64rem
 
       &-item
-        border: 1px solid rgba(75, 140, 198, .5)
-        color: rgba(75, 140, 198, .5)
+        border: 1px solid $tabs-color
+        color: $tabs-color
         flex: none
         font-size: .78rem
         font-weight: 300
@@ -146,14 +163,14 @@
           border-radius: 0 .28rem .28rem 0
 
         &--active
-          background: #4084C0
+          background: $tabs-active-color
           color: map-get($colors, cwhite)
 
     &-item
-      background: linear-gradient(to bottom, #112745 0%, #071a36 100%)
-      border: 1px solid rgba(153, 206, 255, .125)
+      background: linear-gradient(to bottom, $item-gradient-top 0%, $item-gradient-bottom 100%)
+      border: 1px solid $item-border
       border-radius: .35rem
-      box-shadow: 0 -2px 13px rgba(0, 0, 0, .1)
+      box-shadow: 0 -2px 13px $item-boxshadow
       display: block
       margin-bottom: .85rem
       padding: 1.5rem 2rem 1.85rem 1.42rem
@@ -264,7 +281,7 @@
             background-image: url('/images/wallet/ETH.png')
 
       &--disabled
-        background: linear-gradient(to bottom, #05172f 0%, #051730 100%)
+        background: linear-gradient(to bottom, $item-disabled-gradient-top 0%, $item-disabled-gradient-bottom 100%)
 
         &::after
           background: map-get($colors, cgray)

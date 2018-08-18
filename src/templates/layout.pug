@@ -1,3 +1,5 @@
+block variables
+
 doctype html
 html(lang = "en")
   head
@@ -26,8 +28,6 @@ html(lang = "en")
       block content
 
       block footer
-        .footer
-          block footer-logo
-            .footer-logo
-
+        .footer(class= footerClass)
+          .footer-logo
           .footer-version ver. 1.0

@@ -1,9 +1,14 @@
+$font-size: 14px;
+$font-family: Roboto;
+$line-height: 1.3;
+
 $colors: (
   cbackground: #0b1b37,
   ctransparent: rgba(0, 0, 0, 0),
+  cprimary: #99ceff,
   cblack: #000,
   cwhite: #fff,
-  cprimary: #99ceff,
   cred: #fb5e5b,
-  cgray: #c4c4c4
+  cgray: #c4c4c4,
+  cgreen: #04d67e
 );
