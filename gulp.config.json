@@ -9,7 +9,8 @@
     "lint": {
       "rules": {
         "no-color-keywords": 0,
-        "no-vendor-prefixes": 0
+        "no-vendor-prefixes": 0,
+        "nesting-depth": 0
       }
     },
     "autoprefixer": {
