@@ -13,15 +13,18 @@ $button-border: #f00
 
     &-label
       align-items: center
-      bottom: 0
       color: $label-color
       display: flex
       font-size: .71rem
       font-weight: 300
       left: 1.57rem
+      pointer-events: none
       position: absolute
       text-transform: uppercase
-      top: 0
+      top: 1.64rem
+      transition-duration: .1s
+      transition-property: top, font-size
+      transition-timing-function: ease-in-out
       z-index: 1
 
     &-text
@@ -30,8 +33,10 @@ $button-border: #f00
       background-repeat: no-repeat
       border: 0
       color: map-get($colors, cprimary)
+      font-size: .92rem
       height: 100%
-      padding: 1.39rem 3rem 1.39rem 1.57rem
+      padding: 1.53rem 3rem 1.53rem 1.57rem
+      text-transform: uppercase
       width: 100%
 
       &--email
@@ -39,6 +44,12 @@ $button-border: #f00
 
       &--password
         background-image: url('/images/icons/icon-password.svg')
+
+    &--focus
+      .form-input-label
+        bottom: auto
+        font-size: .57rem
+        top: .71rem
 
   &-button
     background: none

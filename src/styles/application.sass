@@ -7,10 +7,10 @@ $background-bg-secondary: rgba(14, 78, 135, 0)
 @import 'components/form'
 
 @import 'partials/footer'
+@import 'partials/auth'
 
 @import 'pages/loader'
 @import 'pages/general'
-@import 'pages/signup'
 
 @viewport
   user-zoom: fixed
@@ -88,10 +88,13 @@ body
           background-image: url('/images/icons/icon-warning.svg')
 
   &-logo
+    align-items: center
     color: map-get($colors, cwhite)
+    display: flex
     font-size: 2.64rem
     font-weight: 100
-    margin: 9rem 0
+    justify-content: center
+    height: 34.5vh
     text-align: center
 
     &::before

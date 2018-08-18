@@ -1,7 +1,7 @@
 extends layout
 
 block title
-  | Sign Up — test-frontend
+  | Sign In — test-frontend
 
 block footer-logo
   .footer-logo.footer-logo--noslogan
@@ -10,25 +10,21 @@ block content
   .page.page--signup
     .auth
       .auth-head
-        .auth-head-title Create Account
-        a.auth-head-button.auth-head-button--signin(href = '#')
-          span user login
+        .auth-head-title Login
+        a.auth-head-button.auth-head-button--signup(href = '#')
+          span Create account
 
       form.form
-        .form-input
+        .form-input.form-input--focus
           .form-input-label Email
           input.form-input-text.form-input-text--email(type = 'text'
-                                                       autocomplete = 'off')
+                                                       autocomplete = 'off'
+                                                       value = 'francis@gmail.com')
 
         .form-input
           .form-input-label Password
           input.form-input-text.form-input-text--password(type = 'password'
                                                           autocomplete = 'off')
 
-        .form-input
-          .form-input-label Confirm Password
-          input.form-input-text.form-input-text--password(type = 'password'
-                                                          autocomplete = 'off')
-
         button.form-button
-          span Continue
+          span login

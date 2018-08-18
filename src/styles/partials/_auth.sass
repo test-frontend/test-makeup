@@ -1,0 +1,50 @@
+$head-button-color: #0a4982
+
+.auth
+  margin-top: -.7rem
+  padding: 0 1.35rem
+  width: 100%
+
+  &-head
+    align-items: center
+    display: flex
+    justify-content: space-between
+    margin-bottom: 2.7rem
+
+    &-title
+      color: map-get($colors, cwhite)
+      font-size: 1.14rem
+      font-weight: 300
+
+    &-button
+      background: $head-button-color
+      border-radius: 1.78rem
+      color: map-get($colors, cprimary)
+      font-size: .71rem
+      font-weight: 300
+      padding: 1rem 2.5rem
+      text-decoration: none
+      text-transform: uppercase
+
+      span
+        align-items: center
+        display: flex
+
+        &::after
+          background-position: center
+          background-repeat: no-repeat
+          background-size: contain
+          content: ''
+          height: 1.07rem
+          margin-left: .75rem
+          width: 1.07rem
+
+      &--signin
+        span
+          &::after
+            background-image: url('/images/icons/icon-user.svg')
+
+      &--signup
+        span
+          &::after
+            background-image: url('/images/icons/icon-key.svg')
