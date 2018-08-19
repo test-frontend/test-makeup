@@ -2,7 +2,11 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="initial-scale=1.0, width=device-width">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="format-detection" content="address=no">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,500">
 		<link rel="stylesheet" href="styles/application.css">
 		<title>
@@ -10,34 +14,41 @@
 		</title>
 	</head>
 	<body>
-		<div class="wrapper">
-			<div class="page page--general">
-				<div class="general">
-					<div class="general-head">
-						<div class="general-head-menu">
-							<div class="general-head-menu-icon"></div>
+		<section class="wrapper">
+			<header class="header">
+				<div class="header-total">
+					<div class="header-total-menu">
+						<div class="header-total-menu-icon"></div>
+					</div>
+					<h1 class="header-total-title">Total assets value</h1>
+					<div class="header-total-price">
+						<div class="header-total-price-value">1967<span>.00 USD</span>
+							<div class="header-total-price-value-filter"></div>
 						</div>
-						<div class="general-head-title">Total assets value</div>
-						<div class="general-head-price">
-							<div class="general-head-price-value">1967<span>.00 USD</span>
-								<div class="general-head-price-value-filter"></div>
-							</div>
-							<div class="general-head-price-active">
-								<div class="general-head-price-active-system">#MHC: 674,64 USD</div>
-								<div class="general-head-price-active-dynamic">+12.55%</div>
-							</div>
+						<div class="header-total-price-active">
+							<div class="header-total-price-active-system">#MHC: 674,64 USD</div>
+							<div class="header-total-price-active-dynamic">+12.55%</div>
 						</div>
 					</div>
+				</div>
+			</header>
+			<main class="content content--general">
+				<div class="general">
 					<div class="general-graph">
 						<div class="general-graph-point"> 
 							<div class="general-graph-point-value">$588.02</div>
 						</div>
 						<div class="general-graph-mask"></div>
 					</div>
-					<div class="general-tabs"><a class="general-tabs-item" href="#">Currency</a><a class="general-tabs-item general-tabs-item--active" href="#">Recent Wallets</a></div>
+					<nav class="general-tabs">
+						<ul class="general-tabs-list">
+							<li class="general-tabs-list-item"><a class="general-tabs-list-item-link" href="#">Currency</a></li>
+							<li class="general-tabs-list-item general-tabs-list-item--active"><a class="general-tabs-list-item-link" href="#">Recent Wallets</a></li>
+						</ul>
+					</nav>
 					<div class="general-list"><a class="general-list-item general-list-item--mhc" href="#"><span class="general-list-item-head"><span class="general-list-item-head-name">SuperWallet</span><span class="general-list-item-head-hash">d7dc 881c ... fd36 84bb 672d 1</span></span><span class="general-list-item-price"><span class="general-list-item-price-value">62<span>.200939</span> <span>#MHC</span></span><span class="general-list-item-price-usd">256.12 USD</span></span></a><a class="general-list-item general-list-item--btc" href="#"><span class="general-list-item-head"><span class="general-list-item-head-name">Btc wallet</span><span class="general-list-item-head-hash">d7dc 881c ... fd36 84bb 672d 1</span></span><span class="general-list-item-price"><span class="general-list-item-price-value">7<span>.29</span> <span>BTC</span></span><span class="general-list-item-price-usd">49,395.12 USD</span></span></a><a class="general-list-item general-list-item--eth general-list-item--disabled" href="#"><span class="general-list-item-head"><span class="general-list-item-head-name">Wallet for exchange</span><span class="general-list-item-head-hash"> d7dc 881c ... fd36 84bb gmgk</span></span><span class="general-list-item-price"><span class="general-list-item-price-value">105<span>.0</span> <span>ETH</span></span><span class="general-list-item-price-usd">14,035.00 USD</span></span></a><a class="general-list-item general-list-item--mhc" href="#"><span class="general-list-item-head"><span class="general-list-item-head-name">SuperWallet</span><span class="general-list-item-head-hash">d7dc 881c ... fd36 84bb 672d 1</span></span><span class="general-list-item-price"><span class="general-list-item-price-value">62<span>.200939</span> <span>#MHC</span></span><span class="general-list-item-price-usd">256.12 USD</span></span></a><a class="general-list-item general-list-item--btc" href="#"><span class="general-list-item-head"><span class="general-list-item-head-name">Btc wallet</span><span class="general-list-item-head-hash">d7dc 881c ... fd36 84bb 672d 1</span></span><span class="general-list-item-price"><span class="general-list-item-price-value">7<span>.29</span> <span>BTC</span></span><span class="general-list-item-price-usd">49,395.12 USD</span></span></a><a class="general-list-item general-list-item--eth" href="#"><span class="general-list-item-head"><span class="general-list-item-head-name">Wallet for exchange</span><span class="general-list-item-head-hash"> d7dc 881c ... fd36 84bb gmgk</span></span><span class="general-list-item-price"><span class="general-list-item-price-value">105<span>.0</span> <span>ETH</span></span><span class="general-list-item-price-usd">14,035.00 USD</span></span></a></div>
 				</div>
-			</div>
-		</div>
+			</main>
+		</section>
 	</body>
 </html>

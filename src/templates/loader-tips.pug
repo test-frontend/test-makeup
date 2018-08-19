@@ -1,20 +1,22 @@
 extends layout
 
+block variables
+  - var pageClass = 'content--loader';
+
 block prepend title
   | Connecting Tips — 
 
 block alert
-  .wrapper-alert Useful Tips
+  .alert Useful Tips
 
 block content
-  .page.page--loader
-    .loader
-      .loader-head
-        .loader-head-title Connecting...
+  .loader
+    .loader-head
+      .loader-head-title Connecting...
 
-      .loader-tips
-        .loader-tips-title Tip 1:
-        .loader-tips-warning Remember to keep the password yourself!
-        .loader-tips-text
-          p Wallet data and&nbsp;QR code are stored in&nbsp;a&nbsp;separate folder that is&nbsp;used to&nbsp;import or&nbsp;restore wallets.
-          p We&nbsp;never save your password anywhere.
+    .loader-tips
+      .loader-tips-title Tip 1:
+      .loader-tips-warning Remember to keep the password yourself!
+      .loader-tips-text
+        p Wallet data and&nbsp;QR code are stored in&nbsp;a&nbsp;separate folder that is&nbsp;used to&nbsp;import or&nbsp;restore wallets.
+        p We&nbsp;never save your password anywhere.

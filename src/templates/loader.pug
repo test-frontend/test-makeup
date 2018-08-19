@@ -1,10 +1,12 @@
 extends layout
 
+block variables
+  - var pageClass = 'content--loader';
+
 block prepend title
   | Connecting — 
 
 block content
-  .page.page--loader
-    .loader
-      .loader-head
-        .loader-head-title Connecting...
+  .loader
+    .loader-head
+      .loader-head-title Connecting...

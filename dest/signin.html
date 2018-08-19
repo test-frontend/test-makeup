@@ -2,7 +2,11 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="initial-scale=1.0, width=device-width">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="format-detection" content="address=no">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,500">
 		<link rel="stylesheet" href="styles/application.css">
 		<title>
@@ -10,30 +14,32 @@
 		</title>
 	</head>
 	<body>
-		<div class="wrapper">
-			<div class="wrapper-logo">Wallet</div>
-			<div class="page page--signin">
+		<section class="wrapper">
+			<header class="header">
+				<h1 class="header-logo"><span>#Meta</span>Wallet</h1>
+			</header>
+			<main class="content content--signin">
 				<div class="auth">
 					<div class="auth-head">
-						<div class="auth-head-title">Login</div><a class="auth-head-button auth-head-button--signup" href="#">Create account</a>
+						<div class="auth-head-title">Login</div><a class="button button--blue auth-head-button auth-head-button--signup" href="#">Create account</a>
 					</div>
 					<form class="form">
 						<div class="form-input form-input--focus">
-							<div class="form-input-label">Email</div>
 							<input class="form-input-text form-input-text--email" type="text" autocomplete="off" value="francis@gmail.com">
+							<div class="form-input-label">Email</div>
 						</div>
 						<div class="form-input">
-							<div class="form-input-label">Password</div>
 							<input class="form-input-text form-input-text--password" type="password" autocomplete="off">
+							<div class="form-input-label">Password</div>
 						</div>
 						<button class="form-button">Login</button>
 					</form>
 				</div>
-			</div>
-			<div class="footer footer--noslogan">
+			</main>
+			<footer class="footer footer--noslogan">
 				<div class="footer-logo"></div>
 				<div class="footer-version">ver. 1.0</div>
-			</div>
-		</div>
+			</footer>
+		</section>
 	</body>
 </html>

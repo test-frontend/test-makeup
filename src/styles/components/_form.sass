@@ -1,15 +1,15 @@
 $label-color: #4084c0
 $input-bg: rgba(5, 11, 31, .6)
+$input-bg-focus: rgba(5, 11, 31, .8)
 $input-border: rgba(153, 206, 255, .3)
-$button-border: #1f77c8
+$input-border-focus: rgba(153, 206, 255, .5)
+$button-border-gradient-top: rgba(135, 197, 255, 1)
+$button-border-gradient-bottom: rgba(31, 119, 200, 1)
 
 .form
   margin-bottom: 1.4rem
 
   &-input
-    background: $input-bg
-    border: 1px solid $input-border
-    border-radius: 2.14rem
     margin-bottom: 2.28rem
     position: relative
 
@@ -31,14 +31,19 @@ $button-border: #1f77c8
 
     &-text
       background: none
+      background-color: $input-bg
       background-position: calc(100% - 1.4rem) center
       background-repeat: no-repeat
-      border: 0
+      border: 1px solid $input-border
+      border-radius: 2.14rem
       color: map-get($colors, cprimary)
       font-size: .92rem
       height: 100%
       padding: 1.53rem 3rem 1.53rem 1.57rem
       text-transform: uppercase
+      transition-duration: .1s
+      transition-property: border-color, background-color
+      transition-timing-function: ease-in-out
       width: 100%
 
       &--email
@@ -46,6 +51,15 @@ $button-border: #1f77c8
 
       &--password
         background-image: url('../images/icons/icon-password.svg')
+
+      &:focus
+        background-color: $input-bg-focus
+        border-color: $input-border-focus
+
+        & + .form-input-label
+          bottom: auto
+          font-size: .57rem
+          top: .71rem
 
     &--focus
       .form-input-label
@@ -55,22 +69,56 @@ $button-border: #1f77c8
 
   &-button
     align-items: center
-    background: url('../images/form-button-border.svg') no-repeat center
-    background-size: 100% 100%
-    border: 0
-    border-radius: 2.14rem
+    background: radial-gradient(ellipse at 40% top, map-get($colors, cwhite) 0%, $button-border-gradient-top 39%, $button-border-gradient-bottom 79%)
+    border: 0 solid transparent
+    border-radius: 3rem
     color: map-get($colors, cprimary)
+    cursor: pointer
     display: flex
     justify-content: center
     margin-top: 3.42rem
     padding: 1.6rem 0
+    position: relative
     text-transform: uppercase
     width: 100%
+    z-index: 1
+
+    &::before
+      background: map-get($colors, cbackground)
+      border-radius: 3rem
+      bottom: 3px
+      content: ''
+      left: 3px
+      position: absolute
+      right: 3px
+      top: 3px
+      z-index: -1
 
     &::after
-      background: url('../images/icons/icon-send.svg') no-repeat center
-      background-size: content
+      background: radial-gradient(ellipse at 40% top, map-get($colors, cwhite) 0%, $button-border-gradient-top 39%, $button-border-gradient-bottom 79%)
       content: ''
       height: 1.14rem
       margin-left: .5rem
+      mask-image: url('../images/icons/icon-send.svg')
+      mask-position: center
+      mask-repeat: no-repeat
+      mask-size: 100% 100%
       width: 1.14rem
+
+    &:hover,
+    &:focus
+      background: map-get($colors, cwhite)
+      color: map-get($colors, cwhite)
+
+      &::after
+        background: map-get($colors, cwhite)
+
+    &:active
+      background: $button-border-gradient-bottom
+      color: map-get($colors, cwhite)
+
+      &::before
+        background: $button-border-gradient-bottom
+
+      &::after
+        background: map-get($colors, cwhite)

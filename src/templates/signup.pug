@@ -1,32 +1,32 @@
 extends layout
 
 block variables
+  - var pageClass = 'content--signup';
   - var footerClass = 'footer--noslogan';
 
 block prepend title
   | Sign Up — 
 
 block content
-  .page.page--signup
-    .auth
-      .auth-head
-        .auth-head-title Create Account
-        a.auth-head-button.auth-head-button--signin(href = '#') User login
+  .auth
+    .auth-head
+      .auth-head-title Create Account
+      a.button.button--blue.auth-head-button.auth-head-button--signin(href = '#') User login
 
-      form.form
-        .form-input
-          .form-input-label Email
-          input.form-input-text.form-input-text--email(type = 'text'
-                                                       autocomplete = 'off')
+    form.form
+      .form-input
+        input.form-input-text.form-input-text--email(type = 'text'
+                                                     autocomplete = 'off')
+        .form-input-label Email
 
-        .form-input
-          .form-input-label Password
-          input.form-input-text.form-input-text--password(type = 'password'
-                                                          autocomplete = 'off')
+      .form-input
+        input.form-input-text.form-input-text--password(type = 'password'
+                                                        autocomplete = 'off')
+        .form-input-label Password
 
-        .form-input
-          .form-input-label Confirm Password
-          input.form-input-text.form-input-text--password(type = 'password'
-                                                          autocomplete = 'off')
+      .form-input
+        input.form-input-text.form-input-text--password(type = 'password'
+                                                        autocomplete = 'off')
+        .form-input-label Confirm Password
 
-        button.form-button Continue
+      button.form-button Continue

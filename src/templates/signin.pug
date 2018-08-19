@@ -1,28 +1,28 @@
 extends layout
 
 block variables
+  - var pageClass = 'content--signin';
   - var footerClass = 'footer--noslogan';
 
 block prepend title
   | Sign In — 
 
 block content
-  .page.page--signin
-    .auth
-      .auth-head
-        .auth-head-title Login
-        a.auth-head-button.auth-head-button--signup(href = '#') Create account
+  .auth
+    .auth-head
+      .auth-head-title Login
+      a.button.button--blue.auth-head-button.auth-head-button--signup(href = '#') Create account
 
-      form.form
-        .form-input.form-input--focus
-          .form-input-label Email
-          input.form-input-text.form-input-text--email(type = 'text'
-                                                       autocomplete = 'off'
-                                                       value = 'francis@gmail.com')
+    form.form
+      .form-input.form-input--focus
+        input.form-input-text.form-input-text--email(type = 'text'
+                                                     autocomplete = 'off'
+                                                     value = 'francis@gmail.com')
+        .form-input-label Email
 
-        .form-input
-          .form-input-label Password
-          input.form-input-text.form-input-text--password(type = 'password'
-                                                          autocomplete = 'off')
+      .form-input
+        input.form-input-text.form-input-text--password(type = 'password'
+                                                        autocomplete = 'off')
+        .form-input-label Password
 
-        button.form-button Login
+      button.form-button Login

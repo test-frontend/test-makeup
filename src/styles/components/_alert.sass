@@ -1,0 +1,33 @@
+.alert
+  align-items: flex-end
+  background: map-get($colors, cprimary)
+  color: map-get($colors, cwhite)
+  display: flex
+  flex-direction: row
+  font-size: .92rem
+  font-weight: 500
+  height: 8.68vh
+  justify-content: center
+  left: 0
+  padding-bottom: .85rem
+  position: fixed
+  text-align: center
+  text-transform: uppercase
+  top: 0
+  width: 100%
+  z-index: 1
+
+  &::before
+    background: url('../images/icons/icon-alert.svg') no-repeat center
+    background-size: contain
+    content: ''
+    height: 1rem
+    margin-bottom: .15rem
+    margin-right: .57rem
+    width: 1rem
+
+  &--warning
+    background: map-get($colors, cred)
+
+    &::before
+      background-image: url('../images/icons/icon-warning.svg')

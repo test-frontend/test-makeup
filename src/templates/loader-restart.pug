@@ -1,19 +1,21 @@
 extends layout
 
+block variables
+  - var pageClass = 'content--loader';
+
 block prepend title
   | Connecting Restart — 
 
 block alert
-  .wrapper-alert.wrapper-alert--warning Warning!
+  .alert.alert--warning Warning!
 
 block content
-  .page.page--loader
-    .loader.loader--reload
-      .loader-head
-        .loader-head-title Can't connect to network
-        .loader-head-desctiption Try again later or enter the offline version
+  .loader.loader--reload
+    .loader-head
+      .loader-head-title Can't connect to network
+      .loader-head-desctiption Try again later or enter the offline version
 
-      .loader-tips
-        .loader-tips-button Enter the wallets
-        .loader-tips-text
-          p The data of&nbsp;all wallets may be&nbsp;incorrect without connection to&nbsp;the network
+    .loader-tips
+      a.button.button--border.loader-tips-button(href = '') Enter the wallets
+      .loader-tips-text
+        p The data of&nbsp;all wallets may be&nbsp;incorrect without connection to&nbsp;the network

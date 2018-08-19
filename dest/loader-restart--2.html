@@ -2,7 +2,11 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="initial-scale=1.0, width=device-width">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="format-detection" content="address=no">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,500">
 		<link rel="stylesheet" href="styles/application.css">
 		<title>
@@ -10,27 +14,28 @@
 		</title>
 	</head>
 	<body>
-		<div class="wrapper">
+		<section class="wrapper">
 			<div class="wrapper-alert wrapper-alert--warning">Warning!</div>
-			<div class="wrapper-logo">Wallet</div>
-			<div class="page page--loader">
+			<header class="header">
+				<h1 class="header-logo"><span>#Meta</span>Wallet</h1>
+			</header>
+			<main class="content content--loader">
 				<div class="loader loader--reload-2">
 					<div class="loader-head">
 						<div class="loader-head-title">Can't connect to network</div>
 						<div class="loader-head-desctiption">Try again later or enter the offline version</div>
 					</div>
-					<div class="loader-tips">
-						<div class="loader-tips-button">Enter the wallets</div>
+					<div class="loader-tips"><a class="button button--border loader-tips-button" href="">Enter the wallets</a>
 						<div class="loader-tips-text">
 							<p>The data of&nbsp;all wallets may be&nbsp;incorrect without connection to&nbsp;the network</p>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="footer">
+			</main>
+			<footer class="footer">
 				<div class="footer-logo"></div>
 				<div class="footer-version">ver. 1.0</div>
-			</div>
-		</div>
+			</footer>
+		</section>
 	</body>
 </html>

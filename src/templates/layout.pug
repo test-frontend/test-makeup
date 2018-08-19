@@ -6,7 +6,19 @@ html(lang = "en")
     block head
       meta(charset = 'utf-8')
       meta(name = 'viewport'
-           content = 'initial-scale=1.0, width=device-width')
+           content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+
+      meta(name = 'format-detection'
+           content = 'telephone=no')
+
+      meta(name = 'format-detection'
+           content = 'address=no')
+
+      meta(name = 'keywords'
+           content = '')
+
+      meta(name = 'description'
+           content = '')
 
       link(rel = 'stylesheet'
            href = 'https://fonts.googleapis.com/css?family=Roboto:100,300,500')
@@ -19,15 +31,17 @@ html(lang = "en")
           | test-frontend
 
   body
-    .wrapper
+    section.wrapper
       block alert
 
-      block logo
-        .wrapper-logo Wallet
+      header.header
+        block header
+          h1.header-logo <span>#Meta</span>Wallet
 
-      block content
+      main.content(class= pageClass)
+        block content
 
       block footer
-        .footer(class= footerClass)
+        footer.footer(class= footerClass)
           .footer-logo
           .footer-version ver. 1.0
